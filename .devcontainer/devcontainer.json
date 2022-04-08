@@ -1,0 +1,19 @@
+{
+    "name": "SC22",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": {
+            "VARIANT": "3.8"
+        }
+    },
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.pythonPath": "/usr/local/bin/python",
+        "dace.sdfv.layout": "vertical"
+    },
+    "extensions": [
+        "ms-python.python",
+        "phschaad.sdfv"
+    ]
+}
