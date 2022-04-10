@@ -33,7 +33,7 @@ echo "[02] Best NPBench CPU version (DaCe):"
 echo "Running..."
 export DACE_profiling="false"
 np_res=$(python npbench/run_benchmark.py -b hdiff -f dace_cpu -p $DIM_PRESET -r $REPS)
-np_median=$(echo "$np_res" | grep "fusion" | grep "median:" | awk '{print $6}')
+np_median=$(echo "$np_res" | grep "fusion" | grep "median:" | awk '{print $7}')
 echo "Runtime: $np_median"
 
 echo ""
@@ -80,7 +80,7 @@ echo "[02] Best NPBench CPU version (DaCe):"
 echo "Running..."
 export DACE_profiling="false"
 np_res=$(python npbench/run_benchmark.py -b hdiff -f dace_cpu -p $DIM_PRESET -r $REPS)
-np_median=$(echo "$np_res" | grep "fusion" | grep "median:" | awk '{print $6}')
+np_median=$(echo "$np_res" | grep "fusion" | grep "median:" | awk '{print $7}')
 echo "Runtime: $np_median"
 
 echo ""
