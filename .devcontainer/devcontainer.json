@@ -16,5 +16,6 @@
     "extensions": [
         "ms-python.python",
         "phschaad.sdfv"
-    ]
+    ],
+    "postCreateCommand": "git submodule update --init"
 }
