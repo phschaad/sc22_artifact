@@ -39,7 +39,7 @@ def run_bert(fname: str, B: int, H: int, N: int, P: int, SM: int, EMB: int):
              attn_bo=attn_bo,
              attn_bq=attn_bq,
              attn_bv=attn_bv,
-             attn_dropout=attn_droput,
+             attn_dropout=attn_dropout,
              norm1_scale=norm1_scale,
              norm1_bias=norm1_bias,
              norm2_scale=norm2_scale,
