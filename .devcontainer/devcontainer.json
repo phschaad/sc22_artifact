@@ -19,5 +19,5 @@
         "phschaad.sdfv"
     ],
     "postCreateCommand": "git submodule update --init",
-    "postAttachCommand": ["python", "-m", "http.server", "--directory", "local_view", "8080"]
+    "postStartCommand": "python -m http.server --directory local_view 8080 &"
 }
