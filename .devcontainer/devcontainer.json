@@ -18,6 +18,5 @@
         "ms-python.python",
         "phschaad.sdfv"
     ],
-    "postCreateCommand": "git submodule update --init",
-    "postStartCommand": "python -m http.server --directory local_view 8080"
+    "postCreateCommand": "git submodule update --init"
 }
