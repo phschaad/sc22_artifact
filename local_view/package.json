@@ -1,0 +1,42 @@
+{
+  "name": "sdfv_localview",
+  "version": "1.0.0",
+  "description": "Local View for the SDFG Visualization",
+  "main": "out/index.js",
+  "scripts": {
+    "start": "npm run serve",
+    "clean": "rimraf dist && rimraf out",
+    "type-check": "tsc --noEmit",
+    "build-dev": "npm run clean && webpack --mode=development",
+    "watch": "npm run clean && webpack --watch --mode=development",
+    "serve": "npm run clean && webpack serve --mode=development",
+    "build-prod": "npm run clean && webpack --mode=production"
+  },
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/jquery": "^3.5.9",
+    "babel-loader": "^8.2.3",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.2",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.16.3",
+    "@types/mathjs": "^9.4.2",
+    "canvas2pdf": "^1.0.7",
+    "chart.js": "^3.7.1",
+    "chartjs-plugin-annotation": "^1.4.0",
+    "jquery": "^3.6.0",
+    "mathjs": "^10.0.2",
+    "pixi-viewport": "^4.34.1",
+    "pixi.js": "^6.2.0"
+  }
+}

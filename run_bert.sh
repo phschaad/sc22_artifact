@@ -43,7 +43,7 @@ read -ra arr <<<"$filtered"
 echo "Runtime: ${arr[-2]}${arr[-1]}"
 
 echo ""
-echo "[02] Tuned - Complete fusion:"
+echo "[03] Tuned - Complete fusion:"
 echo "Running..."
 export DACE_profiling="true"
 export DACE_profiling_status="false"

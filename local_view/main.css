@@ -1,0 +1,118 @@
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#content-box {
+    height: 95%;
+    width: 95%;
+    display: flex;
+    flex-flow: column;
+}
+
+#navbar {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+#sampleSwitcherContainer {
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+#pixi-anchor {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    border: 1px solid black;
+}
+
+#tooltip {
+    position: absolute;
+    display: none;
+    background: #333;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+#tooltip[data-show] {
+    position: absolute;
+    display: block;
+}
+
+#tooltip > .arrow,
+#tooltip > .arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+}
+
+#tooltip > .arrow {
+    visibility: hidden;
+}
+
+#tooltip > .arrow::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+}
+
+.sidebar {
+    height: 100%;
+    width: 400px;
+    padding: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: darkgray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: none;
+}
+
+.sidebar > .sidebarContainer {
+    padding: 1.5rem;
+}
+
+.sidebar > .sidebarContainer > .sidebarCloseButton {
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.sidebarOpenButton {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    z-index: 1;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border-radius: 10%;
+    padding: .8rem;
+}
+
+.settingsContainer > .row {
+    margin-bottom: .3rem;
+}
+
+#chart-container {
+    width: 100%;
+    height: 600px;
+}
+
+#reuse-distance-histogram {
+    height: 100%;
+    width: 100%;
+}

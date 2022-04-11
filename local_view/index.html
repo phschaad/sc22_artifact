@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visualization Demo</title>
+
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="content-box">
+        <div id="navbar">
+            <div id="sampleSwitcherContainer">
+                <label for="sampleSwitcher" id="sampleSwitcherLabel">
+                    Program:
+                </label>
+                <select id="sampleSwitcher">
+                    <optgroup label="HDIFF">
+                        <option value="hdiff-baseline" selected="selected">
+                            01 - HDIFF Baseline
+                        </option>
+                        <option value="hdiff-reshaped">
+                            02 - HDIFF Reshaped
+                        </option>
+                        <option value="hdiff-reordered">
+                            03 - HDIFF Reordered
+                        </option>
+                        <option value="hdiff-aligned">
+                            04 - HDIFF Aligned
+                        </option>
+                        <option value="hdiff-side-by-side">
+                            HDIFF Side-by-side (all 4)
+                        </option>
+                    </optgroup>
+                    <optgroup label="Convolution">
+                        <option value="3d-conv">
+                            3D Convolution
+                        </option>
+                    </optgroup>
+                    <optgroup label="Linear Algebra">
+                        <option value="outer-prod">
+                            Outer Product
+                        </option>
+                        <option value="gemm">
+                            Matrix Multiplication
+                        </option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="sidebarOpenButton" onclick="openSettingsSidebar();">&lt;&lt;</div>
+        </div>
+        <div id="pixi-anchor"></div>
+    </div>
+    <div id="tooltip" role="tooltip">
+        <span id="tooltipText">This is a test</span>
+        <div class="arrow" data-popper-arrow></div>
+    </div>
+    <div id="settingsSidebar" class="sidebar">
+        <div class="sidebarContainer">
+            <div class="sidebarCloseButton" onclick="closeSettingsSidebar();">
+                Close
+            </div>
+            <div class="sidebarContent">
+                <div class="settingsContainer">
+                    <!--
+                    <div class="row">
+                        <label for="tempColorSaturationInput">
+                            Color saturation:
+                        </label>
+                        <input type="number" id="tempColorSaturationInput"
+                            min="0" max="1" value="0.8" step="0.01">
+                    </div>
+                    <div class="row">
+                        <label for="tempColorLightnessInput">
+                            Color lightness:
+                        </label>
+                        <input type="number" id="tempColorLightnessInput"
+                            min="0" max="1" value="0.6" step="0.01">
+                    </div>
+                    <hr>
+                    -->
+                    <div class="row">
+                        <label for="mapPlaybackSpeedInput">
+                            Map Playback Speed:
+                        </label>
+                        <input type="number" id="mapPlaybackSpeedInput" min="1"
+                                max="10" value="1">
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <label for="cacheLineSizeInput">
+                            Cache Line Size (bytes):
+                        </label>
+                        <input type="number" id="cacheLineSizeInput" min="1"
+                                value="32">
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <label for="reuseDistanceThresholdInput">
+                            Reuse Distance Threshold:
+                        </label>
+                        <input type="number" id="reuseDistanceThresholdInput"
+                                min="1"
+                                value="10">
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <h4>
+                            View Modes
+                        </h4>
+                    </div>
+                    <!--
+                    <div class="row">
+                        <label for="input-tiling-viewmode">
+                            <input type="checkbox" name="viewmode" value="tiling"
+                                    id="input-tiling-viewmode">
+                            Tiling
+                        </label>
+                    </div>
+                -->
+                    <div class="row">
+                        <label for="input-access-pattern-viewmode">
+                            <input type="checkbox" name="viewmode"
+                                    value="access-pattern"
+                                    id="input-access-pattern-viewmode">
+                            Access Pattern / Number of Accesses
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label for="input-reuse-distance-viewmode">
+                            <input type="checkbox" name="viewmode"
+                                    value="reuse-distance"
+                                    id="input-reuse-distance-viewmode">
+                            Reuse Distance (Stack Distance)
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label for="input-rdm-median">
+                            <input type="radio" name="reuse-distance-metric"
+                                    value="median"
+                                    checked="checked"
+                                    id="input-rdm-median">
+                            Median
+                        </label>
+                        <label for="input-rdm-min">
+                            <input type="radio" name="reuse-distance-metric"
+                                    value="min"
+                                    id="input-rdm-min">
+                            Min
+                        </label>
+                        <label for="input-rdm-max">
+                            <input type="radio" name="reuse-distance-metric"
+                                    value="max"
+                                    id="input-rdm-max">
+                            Max
+                        </label>
+                        <label for="input-rdm-misses">
+                            <input type="radio" name="reuse-distance-metric"
+                                    value="misses"
+                                    id="input-rdm-misses">
+                            Misses
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label for="input-physical-data-movement-viewmode">
+                            <input type="checkbox" name="viewmode"
+                                    value="physical-data-movement"
+                                    id="input-physical-data-movement-viewmode">
+                            Physical Data Movement
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label for="input-cache-lines-viewmode">
+                            <input type="checkbox" name="viewmode"
+                                    value="cache-lines"
+                                    id="input-cache-lines-viewmode">
+                            Cache Lines
+                        </label>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div id="chart-container">
+                            <canvas id="reuse-distance-histogram"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/canvas2pdf/lib/pdfkit.js"></script>
+    <script src="dist/main.js"></script>
+</body>
+</html>
