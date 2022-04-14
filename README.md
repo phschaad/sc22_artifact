@@ -19,7 +19,7 @@ launch the container and attach VS Code to it:
 2. In the `Devvolumes` panel, click on `Clone Repository in Container Volume`.
    If this option is not present, check if the Docker daemon is running and
    re-open VS Code before resuming from this step.
-3. Paste this Repository's URL into the input field and hit Enter.
+3. Paste `https://github.com/phschaad/sc22_artifact.git` into the input field and hit Enter.
 4. Wait for the container to fully start.
 5. Once an additional `SDFG Optimization` icon appears in the left toolbar,
    the container has been fully started and initialized.
