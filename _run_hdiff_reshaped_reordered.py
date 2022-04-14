@@ -3,9 +3,9 @@ import dace
 import numpy as np
 
 def run_reshaped_reordered(I: int, J: int, K: int):
-    in_field = np.random.rand(I+4, J+4, K)
+    in_field = np.random.rand(K, I+4, J+4)
     coeff = np.random.rand(K, I, J)
-    out_field = np.zeros((I, J, K))
+    out_field = np.zeros((K, I, J))
 
     sdfg = dace.SDFG.from_file('HDIFF/03_reshape_reorder.sdfg')
 
