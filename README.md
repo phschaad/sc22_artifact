@@ -29,6 +29,14 @@ VS Code can be found [here](https://code.visualstudio.com/docs/remote/containers
 
 ### Pre-Built VM
 
+A pre-built VM Image is provided at https://doi.org/10.5281/zenodo.6424094 in
+cases where the approach described above can not be followed. The user is named
+`sc22`, and the user password is `supercomputing`.
+
+**NOTE**: It is strongly discouraged to use the pre-built VM due to decreased
+performance and stability. We instead recommend following the steps outlined
+above.
+
 # Running
 
 ### Analysis via Local View
