@@ -54,16 +54,16 @@ This runs and times two sets of experiments:
   1. *Baseline*: Unoptimized NumPy version provided by NPBench.
   2. *NPBench Best CPU Auto-Opt*: Best automatically optimized version for CPUs
   provided by NPBench.
-  3. Reshaped / Reordered: A hand-tuned version, where data layouts and loop orders
+  3. *Reshaped / Reordered*: A hand-tuned version, where data layouts and loop orders
   were optimized.
-  4. Aligned: A further optimized version, where post-padding was introduced to
+  4. *Aligned*: A further optimized version, where post-padding was introduced to
   improve alignment.
 - Dataset used in the [original NPBench publication](https://doi.org/10.1145/3447818.3460360)
   (`paper` dataset from NPBench, `K=160`, `I=J=256`):
   1. *Baseline*: Unoptimized NumPy version provided by NPBench.
   2. *NPBench Best CPU Auto-Opt*: Best automatically optimized version for CPUs
   provided by NPBench.
-  3. Reshaped / Reordered: A hand-tuned version, where data layouts and loop orders
+  3. *Reshaped / Reordered*: A hand-tuned version, where data layouts and loop orders
   were optimized.
 
 Each experiment run is executed 100 times, and the median time is reported.

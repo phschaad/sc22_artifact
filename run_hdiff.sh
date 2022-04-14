@@ -52,6 +52,7 @@ echo "Running..."
 export DACE_profiling="true"
 export DACE_profiling_status="false"
 export DACE_treps=$REPS
+export DACE_compiler_allow_view_arguments="true"
 dace_res=$(python _run_hdiff_aligned.py -p $DIM_PRESET)
 dace_median=$(echo "$dace_res" | grep "DaCe" | awk '{print $2,$3}')
 echo "Runtime: $dace_median"
