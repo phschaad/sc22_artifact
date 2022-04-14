@@ -185,6 +185,8 @@ class MemoryTile extends Graphics {
             }],
         };
 
+        Application.getInstance().showReuseDistanceHist();
+
         const hist = Application.getInstance().reuseDistanceHistogram;
         if (hist) {
             hist.data = newData;
@@ -193,7 +195,7 @@ class MemoryTile extends Graphics {
     }
 
     private clearReuseDistanceHistogram(): void {
-        // TODO: implement.
+        Application.getInstance().hideReuseDistanceHist();
     }
 
     public onClicked(): void {

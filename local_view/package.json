@@ -1,7 +1,7 @@
 {
-  "name": "sdfv_localview",
+  "name": "visualizationdemo",
   "version": "1.0.0",
-  "description": "Local View for the SDFG Visualization",
+  "description": "Quick Demo of proposed Visualization Styles",
   "main": "out/index.js",
   "scripts": {
     "start": "npm run serve",
@@ -12,7 +12,8 @@
     "serve": "npm run clean && webpack serve --mode=development",
     "build-prod": "npm run clean && webpack --mode=production"
   },
-  "license": "BSD-3-Clause",
+  "author": "Philipp Schaad",
+  "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",

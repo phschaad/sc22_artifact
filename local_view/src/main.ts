@@ -61,6 +61,14 @@ export class Application {
         this._activeProgram?.draw();
     }
 
+    public showReuseDistanceHist(): void {
+        $('#reuse-distance-histogram').show();
+    }
+
+    public hideReuseDistanceHist(): void {
+        $('#reuse-distance-histogram').hide();
+    }
+
     public init(): void {
         this.initPixi();
         this.initTooltip();
@@ -197,6 +205,10 @@ export class Application {
     public initSettings(): void {
         const reuseDistanceCb = $('#input-reuse-distance-viewmode');
         reuseDistanceCb.on('change', () => {
+            this.onUpdateReuseDistanceViewmode();
+        });
+
+        $('#reuse-distance-metric-box').on('change', () => {
             this.onUpdateReuseDistanceViewmode();
         });
 
