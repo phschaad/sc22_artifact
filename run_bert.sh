@@ -3,7 +3,7 @@
 echo "===================================================="
 echo "Running BERT benchmark...."
 
-REPS=10
+REPS=2
 
 echo "----------------------------------------------------"
 echo "Using data sizes:"
@@ -21,6 +21,7 @@ echo "$REPS Repetitions each."
 echo ""
 echo "[01] Baseline - Naive NumPy implementation:"
 echo "Running..."
+export DACE_library_blas_default_implementation="MKL"
 export DACE_profiling="true"
 export DACE_profiling_status="false"
 export DACE_treps=$REPS
@@ -33,6 +34,7 @@ echo "Runtime: ${arr[-2]}${arr[-1]}"
 echo ""
 echo "[02] Tuned - First set of fusions:"
 echo "Running..."
+export DACE_library_blas_default_implementation="MKL"
 export DACE_profiling="true"
 export DACE_profiling_status="false"
 export DACE_treps=$REPS
@@ -45,6 +47,7 @@ echo "Runtime: ${arr[-2]}${arr[-1]}"
 echo ""
 echo "[03] Tuned - Complete fusion:"
 echo "Running..."
+export DACE_library_blas_default_implementation="MKL"
 export DACE_profiling="true"
 export DACE_profiling_status="false"
 export DACE_treps=$REPS

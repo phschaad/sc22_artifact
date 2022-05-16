@@ -554,18 +554,18 @@
             "0"
           ],
           "shape": [
-            "175",
-            "315",
-            "315"
+            "160",
+            "256",
+            "256"
           ],
           "start_offset": 0,
           "storage": "Default",
           "strides": [
-            "100800",
-            "320",
+            "65536",
+            "256",
             "1"
           ],
-          "total_size": "17640000",
+          "total_size": "10485760",
           "transient": false
         },
         "type": "Array"
@@ -647,18 +647,18 @@
             "0"
           ],
           "shape": [
-            "175",
-            "319",
-            "319"
+            "160",
+            "260",
+            "260"
           ],
           "start_offset": 0,
           "storage": "Default",
           "strides": [
-            "102080",
-            "320",
+            "68640",
+            "264",
             "1"
           ],
-          "total_size": "17864000",
+          "total_size": "10982400",
           "transient": false
         },
         "type": "Array"
@@ -709,18 +709,18 @@
             "0"
           ],
           "shape": [
-            "175",
-            "315",
-            "315"
+            "160",
+            "256",
+            "256"
           ],
           "start_offset": 0,
           "storage": "Default",
           "strides": [
-            "100800",
-            "320",
+            "65536",
+            "256",
             "1"
           ],
-          "total_size": "17640000",
+          "total_size": "10485760",
           "transient": false
         },
         "type": "Array"
@@ -912,27 +912,27 @@
                 "subset": {
                   "ranges": [
                     {
-                      "end": "174",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "159",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "318",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "259",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "318",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "259",
+                      "tile": "1",
+                      "step": "1"
                     }
                   ],
                   "type": "Range"
                 },
-                "volume": "434109375",
+                "volume": "10816000",
                 "wcr": null,
                 "wcr_nonatomic": false
               },
@@ -986,27 +986,27 @@
                 "subset": {
                   "ranges": [
                     {
-                      "end": "174",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "159",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "317",
                       "start": "1",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "258",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "316",
                       "start": "2",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "257",
+                      "tile": "1",
+                      "step": "1"
                     }
                   ],
                   "type": "Range"
                 },
-                "volume": "69457500",
+                "volume": "10567680",
                 "wcr": null,
                 "wcr_nonatomic": false
               },
@@ -1060,27 +1060,27 @@
                 "subset": {
                   "ranges": [
                     {
-                      "end": "174",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "159",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "316",
                       "start": "2",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "257",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "317",
                       "start": "1",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "258",
+                      "tile": "1",
+                      "step": "1"
                     }
                   ],
                   "type": "Range"
                 },
-                "volume": "69457500",
+                "volume": "10567680",
                 "wcr": null,
                 "wcr_nonatomic": false
               },
@@ -1134,27 +1134,27 @@
                 "subset": {
                   "ranges": [
                     {
-                      "end": "174",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "159",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "314",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "255",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "314",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "255",
+                      "tile": "1",
+                      "step": "1"
                     }
                   ],
                   "type": "Range"
                 },
-                "volume": "17364375",
+                "volume": "10485760",
                 "wcr": null,
                 "wcr_nonatomic": false
               },
@@ -1208,27 +1208,27 @@
                 "subset": {
                   "ranges": [
                     {
-                      "end": "174",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "159",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "316",
                       "start": "2",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "257",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "316",
                       "start": "2",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "257",
+                      "tile": "1",
+                      "step": "1"
                     }
                   ],
                   "type": "Range"
                 },
-                "volume": "17364375",
+                "volume": "10485760",
                 "wcr": null,
                 "wcr_nonatomic": false
               },
@@ -5138,27 +5138,27 @@
                 "subset": {
                   "ranges": [
                     {
-                      "end": "174",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "159",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "314",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "255",
+                      "tile": "1",
+                      "step": "1"
                     },
                     {
-                      "end": "314",
                       "start": "0",
-                      "step": "1",
-                      "tile": "1"
+                      "end": "255",
+                      "tile": "1",
+                      "step": "1"
                     }
                   ],
                   "type": "Range"
                 },
-                "volume": "17364375",
+                "volume": "10485760",
                 "wcr": null,
                 "wcr_nonatomic": false
               },
@@ -11661,22 +11661,22 @@
             "range": {
               "ranges": [
                 {
-                  "end": "174",
                   "start": "0",
-                  "step": "1",
-                  "tile": "1"
+                  "end": "159",
+                  "tile": "1",
+                  "step": "1"
                 },
                 {
-                  "end": "314",
                   "start": "0",
-                  "step": "1",
-                  "tile": "1"
+                  "end": "255",
+                  "tile": "1",
+                  "step": "1"
                 },
                 {
-                  "end": "314",
                   "start": "0",
-                  "step": "1",
-                  "tile": "1"
+                  "end": "255",
+                  "tile": "1",
+                  "step": "1"
                 }
               ],
               "type": "Range"
@@ -11685,7 +11685,7 @@
             "unroll": false
           },
           "id": 12,
-          "label": "outer_fused_OTF_OTF_OTF[__i0=0:175, __i1=0:315, __i2=0:315]",
+          "label": "outer_fused_OTF_OTF_OTF[__i0=0:160, __i1=0:256, __i2=0:256]",
           "scope_entry": null,
           "scope_exit": "13",
           "type": "MapEntry"

@@ -43,12 +43,10 @@ if __name__ == '__main__':
     np.random.seed(seed=1234567890)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p', '--preset', choices=['L', 'paper'], default='L')
+    parser.add_argument('-p', '--preset', choices=['paper'], default='paper')
 
     args = vars(parser.parse_args())
 
-    if args['preset'] == 'L':
-        run_aligned(I=315, J=315, K=175)
-    elif args['preset'] == 'paper':
+    if args['preset'] == 'paper':
         run_aligned(I=256, J=256, K=160)
 
