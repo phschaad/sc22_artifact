@@ -6,7 +6,9 @@ configured Docker container through
 To achieve this, the following requirements should be met:
 
 - Installed (and running) Docker engine.
+
 - [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
+
 - Microsoft's VS Code[
   Remote Development extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack),
   available through the built-in extension marketplace.
@@ -16,11 +18,15 @@ launch the container and attach VS Code to it:
 
 1. Open VS Code and navigate to the `Remote Explorer` panel in the
    toolbar on the left.
+
 2. In the `Devvolumes` panel, click on `Clone Repository in Container Volume`.
    If this option is not present, check if the Docker daemon is running and
    re-open VS Code before resuming from this step.
+
 3. Paste `https://github.com/phschaad/sc22_artifact.git` into the input field and hit Enter.
+
 4. Wait for the container to fully start.
+
 5. Once an additional `SDFG Optimization` icon appears in the left toolbar,
    the container has been fully started and initialized.
 
@@ -59,11 +65,15 @@ the integrated terminal in VS Code, connected to the container.
 This runs and times the following experiments using the dataset used in the
 [original NPBench publication](https://doi.org/10.1145/3447818.3460360)
   (`paper` dataset from NPBench, `K=160`, `I=J=256`):
+
   1. *Baseline*: Unoptimized NumPy version provided by NPBench.
+
   2. *NPBench Best CPU Auto-Opt*: Best automatically optimized version for CPUs
   provided by NPBench.
+
   3. *Reshaped / Reordered*: A hand-tuned version, where data layouts and loop orders
   were optimized.
+
   4. *Aligned*: A further optimized version, where post-padding was introduced to
   improve alignment.
 
@@ -75,29 +85,49 @@ The BERT encoder can be run using the shell script `run_bert.sh` through
 the integrated terminal in VS Code, connected to the container.
 
 This runs and times the following experiments:
+
 1. *Baseline*: Unoptimized, naive NumPy implementation.
+
 2. *Fused*: Optimized version with some loop fusion.
-2. *Fully Fused ('Final')*: Fastest obtained version with maximal degree of loop fusion.
+
+3. *Fully Fused ('Final')*: Fastest obtained version with maximal degree of loop fusion.
 
 Each experiment run is executed 10 times, and the median time is reported.
 
 # File Structure
 
 - `README.md`: This file.
+
 - `.devcontainer`: VS Code development container settings, including Dockerfile.
+
 - `.vscode`: VS Code settings and configurations.
+
 - `BERT`: Contains three versions of the BERT encoder.
+
   - `01_original.sdfg`: Unoptimized, naive NumPy implementation.
+
   - `02_fused.sdfg`: Optimized version with some loop fusion.
+
   - `03_final.sdfg`: Fastest obtained version with maximal degree of loop fusion.
+
 - `HDIFF`: Contains four versions of the horizontal diffusion (`hdiff`) program.
+
   - `01_original.sdfg`: Unoptimized, naive NumPy implementation from NPBench.
+
   - `02_npbench_best_cpu.sdfg`: Best auto-optimized CPU version obtained from NPBench.
+
   - `03_reshape_reorder.sdfg`: Optimized version with optimized data layout and loop order.
+
   - `04_aligned.sdfg`: Further optimized version with post-padding to improve alignment.
+
 - `local_view`: Source code for the local analysis view.
+
 - `npbench`: The NPBench version used for the experiments, as a git submodule.
+
 - `_*.py`: Helper scripts to run the experiments, don't execute directly.
+
 - `localview.sh`: **Shell script to start the local analysis view in a webserver on port 8080.**
+
 - `run_bert.sh`: **Shell script to run all BERT encoder experiments.**
+
 - `run_hdiff.sh`: **Shell script to run all HDIFF experiments.**
