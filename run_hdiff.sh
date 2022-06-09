@@ -3,8 +3,6 @@
 echo "===================================================="
 echo "Running HDIFF benchmark...."
 
-export OMP_NUM_THREADS=32
-
 REPS=100
 
 DIM_I=256
