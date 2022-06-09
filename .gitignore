@@ -1,3 +1,4 @@
 _dacegraphs/
 .dacecache/
 npbench.db
+_daint_init.sh

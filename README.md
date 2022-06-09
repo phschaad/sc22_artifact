@@ -56,10 +56,9 @@ local view.
 Horizontal diffusion can be run using the shell script `run_hdiff.sh` through
 the integrated terminal in VS Code, connected to the container.
 
-This runs and times two sets of experiments:
-
-- Dataset with purposefully introduced misalignment (modified `L` dataset from
-  NPBench, `K=175`, `I=J=315`):
+This runs and times the following experiments using the dataset used in the
+[original NPBench publication](https://doi.org/10.1145/3447818.3460360)
+  (`paper` dataset from NPBench, `K=160`, `I=J=256`):
   1. *Baseline*: Unoptimized NumPy version provided by NPBench.
   2. *NPBench Best CPU Auto-Opt*: Best automatically optimized version for CPUs
   provided by NPBench.
@@ -67,13 +66,6 @@ This runs and times two sets of experiments:
   were optimized.
   4. *Aligned*: A further optimized version, where post-padding was introduced to
   improve alignment.
-- Dataset used in the [original NPBench publication](https://doi.org/10.1145/3447818.3460360)
-  (`paper` dataset from NPBench, `K=160`, `I=J=256`):
-  1. *Baseline*: Unoptimized NumPy version provided by NPBench.
-  2. *NPBench Best CPU Auto-Opt*: Best automatically optimized version for CPUs
-  provided by NPBench.
-  3. *Reshaped / Reordered*: A hand-tuned version, where data layouts and loop orders
-  were optimized.
 
 Each experiment run is executed 100 times, and the median time is reported.
 
@@ -106,7 +98,6 @@ Each experiment run is executed 10 times, and the median time is reported.
 - `local_view`: Source code for the local analysis view.
 - `npbench`: The NPBench version used for the experiments, as a git submodule.
 - `_*.py`: Helper scripts to run the experiments, don't execute directly.
-- `npbench_hdiff_override.json`: Custom data size configuration for NPBench.
 - `localview.sh`: **Shell script to start the local analysis view in a webserver on port 8080.**
 - `run_bert.sh`: **Shell script to run all BERT encoder experiments.**
 - `run_hdiff.sh`: **Shell script to run all HDIFF experiments.**
